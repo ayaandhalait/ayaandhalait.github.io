@@ -7,6 +7,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
+   nav { width: 100%; padding: 20px 40px; position: fixed; top: 0; left: 0; background: rgba(0,0,0,0.3); backdrop-filter: blur(10px); display: flex; justify-content: space-between; align-items: center; z-index: 1000; border-bottom: 2px solid #ff6f61; }
+  nav .logo { font-size: 1.6em; font-weight: 700; color: #ff6f61; text-shadow: 0 0 10px #ff6f61; }
+  nav ul { list-style: none; display: flex; gap: 25px; }
+  nav ul li a { text-decoration: none; color: #fff; font-weight: 600; transition: 0.3s; }
+  nav ul li a:hover { color: #ff6f61; }
 
   body {
     font-family: 'Comfortaa', cursive;
@@ -138,6 +143,10 @@
 </style>
 </head>
 <body>
+ <nav>
+  <div class="logo">Ayaan</div>
+<p style="text-align: right;">Panthera Dhalait</p>
+ </nav>
 
   <header>
     <img src="Ayaan.jpg" alt="Ayaan Dhalait">
@@ -166,5 +175,6 @@
 
 </body>
 </html>
+
 
 
