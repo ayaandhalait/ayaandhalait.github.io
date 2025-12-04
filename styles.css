@@ -283,8 +283,12 @@ footer{
   object-fit: cover; 
   box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
   transition: transform 0.2s;
+    display: block;
+  min-width: 100px;
+  min-height: 100px;
 }
 
 .app-item img:hover {
   transform: scale(1.1); 
 }
+
