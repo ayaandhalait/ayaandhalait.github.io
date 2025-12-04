@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ayaan Dhalait - FAQ</title>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="faq.css">
+<link rel="icon" type="image/png" href="/favicon.png">
+</head>
+<body>
+
+<nav>
+  <div class="logo">Panthera Dhalait</div>
+  <div class="right-items">
+    <a href="/">Home</a>
+    <a href="/articles/">Articles</a>
+    <a href="/blogs/">Blogs</a>
+    <a href="/store/">App Store</a>
+    <a href="/faq/">FAQ</a>
+  </div>
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+<header>
+  <h1>Frequently Asked Questions</h1>
+  <p>Learn more about me, my work, and my projects.</p>
+</header>
+
+<section class="faq-section">
+
+  <div class="faq-item">
+    <div class="faq-question">Who are you?</div>
+    <div class="faq-answer">
+      <p>I'm Ayaan Dhalait, a student developer and the Chief Technology Officer (CTO) at the Student Initiative Board (SIB). I build games, VR simulations, and interactive projects using Python, HTML, CSS, and JavaScript.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">What is SIB?</div>
+    <div class="faq-answer">
+      <p>SIB is a student-led organization focused on technology and innovation. I serve as the CTO and Head of the SWC, helping guide technical projects and mentoring student teams within the organization.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">What kind of projects do you work on?</div>
+    <div class="faq-answer">
+      <p>I work on Python-based games, VR and 3D simulations, and web development projects using HTML, CSS, and JavaScript.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Where can I see your work?</div>
+    <div class="faq-answer">
+      <p>You can see my work on my homepage, the articles and blogs section, and the App Store page where I showcase my apps and games.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">How can I learn from your work?</div>
+    <div class="faq-answer">
+      <p>You can explore my articles, blogs, and projects to understand how I build games, VR simulations, and Python projects. These provide tutorials, explanations, and code snippets for learners.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Are you open for collaborations or work?</div>
+    <div class="faq-answer">
+      <p>I am not currently open for collaborations or work. This site is primarily to share my projects, articles, and tutorials for learning and reference.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">What technologies do you use?</div>
+    <div class="faq-answer">
+      <p>I mainly use Python for games and VR simulations, and HTML, CSS, and JavaScript for web development projects.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">How is your work documented?</div>
+    <div class="faq-answer">
+      <p>Most of my projects are documented online with tutorials, code examples, and visual demonstrations to help others understand how I create my work.</p>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  © Ayaan Dhalait. A Computer Programmer
+</footer>
+
+<script>
+const hamburger = document.querySelector('.hamburger');
+const menu = document.querySelector('.right-items');
+
+hamburger.addEventListener('click', () => {
+  menu.classList.toggle('active');
+});
+
+const questions = document.querySelectorAll('.faq-question');
+questions.forEach(q => {
+  q.addEventListener('click', () => {
+    q.classList.toggle('active');
+    const answer = q.nextElementSibling;
+    if(q.classList.contains('active')){
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+      answer.style.padding = '15px 20px';
+    } else {
+      answer.style.maxHeight = null;
+      answer.style.padding = '0 20px';
+    }
+  });
+});
+</script>
+
+</body>
+</html>
