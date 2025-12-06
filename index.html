@@ -8,6 +8,30 @@
 <link rel="stylesheet" href="styles.css">
 <meta name="google-site-verification" content="QNGD0BfX23dAmuRYE3sj1mmP7LS_ul7C5h_fe_SbaKo" />
 <link rel="icon" type="image/png" href="/favicon.png">
+<style>
+@keyframes styleSwap {
+  0% {font-family:'Comfortaa',sans-serif;color:#ffffff;transform:scale(1) rotate(0deg);text-shadow:none;}
+  25% {font-family:'Comic Sans MS',cursive;color:#ff69b4;transform:scale(1.1) rotate(2deg);text-shadow:2px 2px 0 #ffb6c1;}
+  50% {font-family:'Courier New',monospace;color:#00eaff;transform:scale(0.95) rotate(-2deg);text-shadow:2px 2px 0 #005f7f;}
+  75% {font-family:'Impact',sans-serif;color:#7fff00;transform:scale(1.08) rotate(1deg);text-shadow:3px 3px 0 #4caf50;}
+  100% {font-family:'Comfortaa',sans-serif;color:#ffffff;transform:scale(1) rotate(0deg);text-shadow:none;}
+}
+
+.name-wrapper {
+  height: 80px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.name-wrapper h1 {
+  animation: styleSwap 2.3s infinite;
+  margin:0;
+  line-height:1;
+  white-space:nowrap;
+}
+</style>
 </head>
 <body>
 <nav>
@@ -25,9 +49,12 @@
     <span></span>
   </div>
 </nav>
+
 <header>
   <img src="Ayaan.jpg" alt="Ayaan Dhalait">
-  <h1>Ayaan Dhalait</h1>
+  <div class="name-wrapper">
+    <h1>Ayaan Dhalait</h1>
+  </div>
   <p>"I am someone who you probably don't know. I have one purpose in life and that is to have no purpose in life. I belong to Panthera Dhalait which is a genus of the family felidae."</p>
 </header>
 
@@ -38,7 +65,7 @@
 <section>
   <h2>About Me</h2>
   <div class="about-text">
-    Hello! I'm Ayaan, I am a Child Prodigy in programming. I am a major How To Train Your Dragon Fan and I make stuff<br><br>
+    Hello! I'm Ayaan and I make stuff<br><br>
     I like doing stuff like coding and trekking. I work for the 
     <a href="https://sibglobal.github.io">Student Initiative Board (SIB)</a> 
     as their Chief Technological Officer (CTO).<br><br>
@@ -49,16 +76,12 @@
 <footer>
   © Ayaan Dhalait. A Computer Programmer
 </footer>
-<script>
-  const hamburger = document.querySelector('.hamburger');
-  const menu = document.querySelector('.right-items');
 
-  hamburger.addEventListener('click', () => {
-    menu.classList.toggle('active');
-  });
+<script>
+const hamburger=document.querySelector('.hamburger');
+const menu=document.querySelector('.right-items');
+hamburger.addEventListener('click',()=>{menu.classList.toggle('active');});
 </script>
+
 </body>
 </html>
-
-
-
